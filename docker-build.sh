@@ -42,10 +42,10 @@ launchDockerBuild() {
 # Proxy mode to use for build
 if [[ "$1" = "noproxy" ]]; then
     echo "No proxy mode"
-    DOCKER_BUILD_ARGS="--build-arg http_proxy= --build-arg https_proxy= "
+    DOCKER_BUILD_ARGS="--build-arg APK_ARGS= --build-arg http_proxy= --build-arg https_proxy= --build-arg HTTP_PROXY= --build-arg HTTPS_PROXY= "
 else
     echo "Proxy mode"
-    DOCKER_BUILD_ARGS="--build-arg http_proxy=http://gateway.seb.zscaler.net:80 --build-arg https_proxy=http://gateway.seb.zscaler.net:80 "
+    DOCKER_BUILD_ARGS="--build-arg APK_ARG_KEY=--repository --build-arg APK_ARG_VALUE=http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/ --build-arg http_proxy=http://gateway.seb.zscaler.net:80 --build-arg https_proxy=http://gateway.seb.zscaler.net:80 --build-arg HTTP_PROXY=http://gateway.seb.zscaler.net:80 --build-arg HTTPS_PROXY=http://gateway.seb.zscaler.net:80 "
 fi
 
 if [[ ${TAG_SUFFIXES[@]} ]]; then
