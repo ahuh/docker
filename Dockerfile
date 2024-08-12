@@ -1,4 +1,4 @@
-FROM docker:23.0.1-git AS git-bash
+FROM docker:27.1.1 AS git-bash
 
 # Set env var dedicated to build-time only (for availability during docker BUILD phase)
 # - HTTP proxy settings
@@ -11,4 +11,4 @@ ARG HTTPS_PROXY
 ARG APK_ARG_KEY
 ARG APK_ARG_VALUE
 
-RUN apk add --no-cache ${APK_ARG_KEY} ${APK_ARG_VALUE} bash
+RUN apk add --no-cache ${APK_ARG_KEY} ${APK_ARG_VALUE} git bash
