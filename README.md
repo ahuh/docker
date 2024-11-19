@@ -1,2 +1,2 @@
 # Docker
-Docker official image with additional commands (bash)
+Docker official image with additional commands (git, bash)
