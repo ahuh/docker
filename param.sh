@@ -14,8 +14,9 @@ export IMAGE_NAME=docker
 
 # - Array of the tag versions to build for the image
 declare -x -a TAG_VERSIONS=(
-    20.10.17
-    20.10
+    23.0.1
+    23.0
+    23
     latest
 )
 
