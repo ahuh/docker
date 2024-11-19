@@ -14,6 +14,7 @@ export IMAGE_NAME=docker
 
 # - Array of the tag versions to build for the image
 declare -x -a TAG_VERSIONS=(
+    20.10.17
     20.10
     latest
 )
@@ -21,7 +22,6 @@ declare -x -a TAG_VERSIONS=(
 # - Map of the target (key) and tag suffix (value) for the image
 # (remove map declaration for single build, without multi-stage build)
 declare -x -A TAG_SUFFIXES=(
-    [git]=git
     [git-bash]=git-bash
 )
 
