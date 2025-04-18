@@ -1,4 +1,4 @@
-FROM docker:27.2.1 AS git-bash
+FROM docker:28.1.0 AS git-bash
 
 # Set env var dedicated to build-time only (for availability during docker BUILD phase)
 # - HTTP proxy settings
